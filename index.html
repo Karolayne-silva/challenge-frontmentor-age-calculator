@@ -1,39 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   
-  <title>Frontend Mentor | Age calculator app</title>
+  <title>Age calculator app</title>
 
   
 </head>
 <body>
   <div class="container">
     <main>
-      <div>
-        <label for="">Day</label>
-        <input type="number" name="day" id="day" placeholder="DD">
-        <div class="error" id="error-day">Must be a valid day</div>
-      </div> 
-      <div>
-        <label for="">Month</label>
-        <input type="number" name="month" id="month" placeholder="MM">
-        <div class="error" id="error-month">Must be a valid month</div>
-      </div> 
-      <div>
-        <label for="">Year</label>
-        <input type="number" name="year" id="year" placeholder="YYYY">
-        <div class="error" id="error-year">Must be in the past</div>
+      <div class="labels-input">
+
+        <div class="label">
+          <label for="day" class="erro-label">Day</label>
+          <input type="number" name="day" id="day" class="errorr" placeholder="DD">
+          <div class="error" id="error-day">Must be a valid day</div>
+          <div class="erro-required" id="erro-required">This Field is required</div>
+        </div> 
+
+        <div class="label">
+          <label for="month" class="erro-label">Month</label>
+          <input type="number" name="month" id="month" class="errorr" placeholder="MM">
+          <div class="error" id="error-month">Must be a valid month</div>
+          <div class="erro-required" id="erro-required">This Field is required</div>
+        </div> 
+
+        <div class="label">
+          <label for="year" class="erro-label">Year</label>
+          <input type="number" name="year" id="year" class="errorr" placeholder="YYYY">
+          <div class="error" id="error-year">Must be in the past</div>
+          <div class="erro-required" id="erro-required">This Field is required</div>
+        </div>
+
       </div>
-      <button id="btn"></button>
+      <span class="detalhe"></span>
+      <button id="btn"><img src="/assets/images/icon-arrow.svg" alt="icone"></button>
+      
+
+
       <div class="result">
-        <p><span class="day">-- </span>days</p>
-        <p><span class="month">-- </span>months</p>
-        <p><span class="year">-- </span>years</p>
+        <p><span class="year">--</span>years</p>
+        <p><span class="month">--</span>months</p>
+        <p><span class="day">--</span>days</p>
       </div>
       
     </main>
@@ -43,6 +59,5 @@
     </div>
   </div>
   <script src="script.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/2.24.0/date_fns.min.js"></script>
 </body>
 </html>

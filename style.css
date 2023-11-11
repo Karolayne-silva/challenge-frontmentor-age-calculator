@@ -8,19 +8,19 @@ body{
 }
 .error{
     display: none;
-    font-size: 11px;
+    font-size: 0.56rem;
     color: hsl(0, 100%, 67%);
     font-style: italic;
 }
 .erro-required{
     display: none;
-    font-size: 11px;
+    font-size: 0.56rem;
     color: hsl(0, 100%, 67%);
     font-style: italic;
 }
 
 input{
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 }
 .container{
     display: flex;
@@ -28,79 +28,186 @@ input{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    gap: 20px;
+    gap: 1.25rem;
 }
 main{
-    padding: 40px 60px 40px 40px;
-    border-radius: 15px 15px 160px 15px;
+    padding: 2.5rem 60px 2.5rem 2.5rem;
+    border-radius: 0.93rem 0.93rem 10rem 0.93rem;
     background-color: hsl(0, 0%, 100%);
     width: 32rem;
     position: relative;
 }
 main .labels-input{
-    display: flex;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1.87rem;
+    height: 5.93rem;
 }
 .label label{
     display: block;
     color: hsl(0, 1%, 44%);
-    font-size: 15px;
+    font-size: 0.93rem;
     text-transform: uppercase;
     font-weight: 700;
     font-style: normal;
-    letter-spacing: 2px;
-    padding-bottom: 5px;
+    letter-spacing: 0.125rem;
+    padding-bottom: 0.3125rem;
 }
 .label input{
-    padding: 5px 7px;
-    height: 45px;
-    width: 110px;
+    padding: 0.3125rem 7px;
+    height: 2.81rem;
+    /* width: 110px; */
+    width: 100%;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.3125rem;
     border: 1px solid hsl(0, 0%, 86%);
-    font-size: 25px;
+    font-size: 1.56rem;
     font-weight: 700;
-    margin-bottom: 3px;
+    margin-bottom: 0.18rem;
 }
 input:focus{
     outline: none;
     border: 1px solid hsl(259, 100%, 65%);
 }
 .result{
-    margin-top: 40px;
+    margin-top: 2.5rem;
 }
 
 .result p{
-    font-size: 70px;
+    font-size: 4.37rem;
     font-weight: 800;
     line-height: 1.1em;
     font-style: italic;
 }
 .result span{
     color: hsl(259, 100%, 65%);
-    margin-right: 10px;
+    margin-right: 0.625rem;
 }
 .detalhe{
     display: block;
     width: 100%;
     height: 0.5px;
     background-color: hsl(0, 0%, 86%);
-    
-    margin-top: 35px;
+    margin-top: 3.75rem;
 }
 #btn{
     border: none;
     background-color: hsl(259, 100%, 65%);
-    height: 75px;
-    width: 75px;
+    height: 4.68rem;
+    width: 4.68rem;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 125px;
+    top: 155px;
     left: 490px;
+    margin-bottom: 0.125rem;
 }
 .attribution {
-    font-size: 0.9rem;
+    font-size: 0.6rem;
+    font-weight: 600;
+}
+@media (max-width: 600px){
+    main{
+        width: 23rem;
+        padding: 2.5rem 1.87rem 2.5rem 1.87rem;
+        border-radius: 0.93rem 0.93rem 90px 0.93rem;
+    }
+    .label input{
+        width: 100%;
+    }
+    main .labels-input{
+        display: flex;
+        gap: 1.87rem;
+    }
+    .label label{
+        font-size: 0.75rem;
+    }
+    .result{
+        margin-top: 2.5rem;
+    }
+
+    .result p{
+        font-size: 3.125rem;
+    }
+    #btn{
+        position: absolute;
+        top: 160px;
+        left: 180px;
+        height: 65px;
+        width: 65px;
+    }
+    .detalhe{
+        margin-top: 3.75rem;
+    }
+}
+@media (max-width: 450px){
+    main{
+        width: 15rem;
+        padding: 2.5rem 30px 2.5rem 30px;
+        border-radius: 0.93rem 0.93rem 6.87rem 0.93rem;
+    }
+    .label input{
+        width: 100%;
+        font-size: 1.06rem;
+    }
+    .result p{
+        font-size: 2.5rem;
+    }
+    #btn{
+        position: absolute;
+        top: 150px;
+        left: 125px;
+        height: 55px;
+        width: 3.43rem;
+    }
+    #btn img{
+        width: 80%; 
+    }
+    .label input{
+        height: 1.87rem;
+    }
+    .detalhe{
+        margin-top: 2.5rem;
+    }
+
+}
+@media (max-width: 290px){
+     main{
+        width: 13rem;
+        padding: 2.5rem 30px 2.5rem 30px;
+        border-radius: 0.93rem 0.93rem 6.87rem 0.93rem;
+    }
+    .label input{
+        font-size: 0.87rem;
+    }
+    #btn img{
+        width: 50%; 
+        height: 50%;
+    }
+    #btn{
+        position: absolute;
+        top: 140px;
+        left: 105px;
+        height: 3.125rem;
+        width: 3.125rem;
+    }
+    .result p{
+        font-size: 1.87rem;
+    }
+    .attribution {
+        font-size: 0.5rem;
+    }
+    .error{
+        font-size: 6.4px;
+    }
+    .erro-required{
+        font-size: 6.4px;
+    }
+    .detalhe{
+        margin-top: 1.87rem;
+    }
+    
+
 }

@@ -46,7 +46,9 @@ btn.addEventListener('click', () =>{
     })
     
     const erroD = document.getElementById('error-day');
-        
+    const maxDaysInMonth = new Date(year, month, 0).getDate();
+  
+    
     if (day > 31 || day < 0){
         erroD.style.display = 'block';
         isValid = false;
@@ -54,14 +56,34 @@ btn.addEventListener('click', () =>{
         erroInput.forEach(input => {
             input.style.border = "1px solid hsl(0, 100%, 67%)"
         })
+    
+        erroLabel.forEach(label => {
+            label.style.color = 'hsl(0, 100%, 67%)';
+        })
+        
+    }
+    else if(!(day >= 1 && day <= maxDaysInMonth)){
+        console.log('entrou nesse caralho')
+        erroD.style.display = 'block';
+        isValid = false;
 
+        erroInput.forEach(input => {
+            input.style.border = "1px solid hsl(0, 100%, 67%)"
+        })
+    
         erroLabel.forEach(label => {
             label.style.color = 'hsl(0, 100%, 67%)';
         })
     }
     else{
-         erroD.style.display = 'none';
-    } 
+        erroD.style.display = 'none';
+    }
+
+    
+    
+   
+
+
 
     const erroM = document.getElementById('error-month');
     
@@ -97,7 +119,20 @@ btn.addEventListener('click', () =>{
     }
     else{
         erroY.style.display = 'none';
-        
+      
+    if (day > 30 && month === 4 || month === 6 || month === 9 || month === 11){
+        erroY.style.display = 'block';
+        isValid = false;
+
+        erroInput.forEach(input => {
+            input.style.border = "1px solid hsl(0, 100%, 67%)"
+        })
+
+        erroLabel.forEach(label => {
+            label.style.color = 'hsl(0, 100%, 67%)';
+        })
+    }
+    
 
 
 

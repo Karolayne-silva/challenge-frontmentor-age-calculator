@@ -27,7 +27,7 @@ btn.addEventListener('click', () =>{
             erro.style.display = "block";
 
             erroInput.forEach(input => {
-                input.style.border = "1px solid hsl(0, 100%, 67%)"
+                input.style.border = '1px solid hsl(0, 100%, 67%)';
             })
 
             erroLabel.forEach(label => {
@@ -62,8 +62,7 @@ btn.addEventListener('click', () =>{
         })
         
     }
-    else if(!(day >= 1 && day <= maxDaysInMonth)){
-        console.log('entrou nesse caralho')
+    else if(!(day >= 1 && day <= maxDaysInMonth) && day !==""){
         erroD.style.display = 'block';
         isValid = false;
 
@@ -119,19 +118,6 @@ btn.addEventListener('click', () =>{
     }
     else{
         erroY.style.display = 'none';
-      
-    if (day > 30 && month === 4 || month === 6 || month === 9 || month === 11){
-        erroY.style.display = 'block';
-        isValid = false;
-
-        erroInput.forEach(input => {
-            input.style.border = "1px solid hsl(0, 100%, 67%)"
-        })
-
-        erroLabel.forEach(label => {
-            label.style.color = 'hsl(0, 100%, 67%)';
-        })
-    }
     
 
 

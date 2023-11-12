@@ -3,19 +3,26 @@
     margin: 0px;
     font-family: 'Poppins', sans-serif;
 }
+:root{
+    --light-red: hsl(0, 100%, 67%);
+    --white: hsl(0, 0%, 100%);
+    --smokey-grey: hsl(0, 1%, 44%);
+    --light-grey: hsl(0, 0%, 86%);
+    --purple: hsl(259, 100%, 65%);
+}
 body{
     background-color: hsl(0, 0%, 94%);
 }
 .error{
     display: none;
     font-size: 0.56rem;
-    color: hsl(0, 100%, 67%);
+    color: var(--light-red);
     font-style: italic;
 }
 .erro-required{
     display: none;
     font-size: 0.56rem;
-    color: hsl(0, 100%, 67%);
+    color: var(--light-red);
     font-style: italic;
 }
 
@@ -33,7 +40,7 @@ input{
 main{
     padding: 2.5rem 60px 2.5rem 2.5rem;
     border-radius: 0.93rem 0.93rem 10rem 0.93rem;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--white);
     width: 32rem;
     position: relative;
 }
@@ -45,7 +52,7 @@ main .labels-input{
 }
 .label label{
     display: block;
-    color: hsl(0, 1%, 44%);
+    color: var(--smokey-grey);
     font-size: 0.93rem;
     text-transform: uppercase;
     font-weight: 700;
@@ -60,14 +67,14 @@ main .labels-input{
     width: 100%;
     border: none;
     border-radius: 0.3125rem;
-    border: 1px solid hsl(0, 0%, 86%);
+    border: 1px solid var(--light-grey);
     font-size: 1.56rem;
     font-weight: 700;
     margin-bottom: 0.18rem;
 }
 input:focus{
     outline: none;
-    border: 1px solid hsl(259, 100%, 65%);
+    border: 1px solid var(--purple);
 }
 .result{
     margin-top: 2.5rem;
@@ -80,19 +87,19 @@ input:focus{
     font-style: italic;
 }
 .result span{
-    color: hsl(259, 100%, 65%);
+    color: var(--purple);
     margin-right: 0.625rem;
 }
 .detalhe{
     display: block;
     width: 100%;
     height: 0.5px;
-    background-color: hsl(0, 0%, 86%);
+    background-color: var(--light-grey);
     margin-top: 3.75rem;
 }
 #btn{
     border: none;
-    background-color: hsl(259, 100%, 65%);
+    background-color: var(--purple);
     height: 4.68rem;
     width: 4.68rem;
     border-radius: 50%;
